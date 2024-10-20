@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import { DollarSign, AlertCircle } from 'react-feather';  // Icons for budget overview
+import { DollarSign, AlertCircle } from 'react-feather'; // Icons for budget overview
 
 const SavingGoals = () => {
   const [goals, setGoals] = useState([]);
   const [goalName, setGoalName] = useState('');
   const [targetAmount, setTargetAmount] = useState('');
   const [savedAmount, setSavedAmount] = useState('');
-
-  const monthlyBudget = 50000;  // Example budget
-  const currentSpend = 45000;   // Example current spend
 
   // Handle form submission
   const addGoal = (e) => {
@@ -24,6 +21,9 @@ const SavingGoals = () => {
     setTargetAmount('');
     setSavedAmount('');
   };
+
+  // Calculate total saved from all goals
+  const totalSaved = goals.reduce((acc, goal) => acc + goal.saved, 0);
 
   return (
     <div className="saving-goals">
@@ -109,46 +109,6 @@ const SavingGoals = () => {
       ) : (
         <p className="text-gray-500">You have no saving goals yet. Add a goal to start tracking!</p>
       )}
-
-      {/* Budget Overview Component */}
-      <BudgetOverview monthlyBudget={monthlyBudget} currentSpend={currentSpend} />
-    </div>
-  );
-};
-
-// Budget Overview Component
-const BudgetOverview = ({ monthlyBudget, currentSpend }) => {
-  const remaining = monthlyBudget - currentSpend;
-
-  return (
-    <div className="bg-white shadow rounded-lg p-4 mt-6">
-      <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-        <DollarSign size={20} /> Budget Overview
-      </h3>
-      <div className="space-y-4">
-        <div className="flex justify-between text-sm">
-          <span>Monthly Budget: ₹{monthlyBudget}</span>
-          <span>Spent: ₹{currentSpend}</span>
-          <span>Remaining: ₹{remaining}</span>
-        </div>
-        <div className="w-full bg-gray-200 rounded-full h-4">
-          <div
-            className={`bg-green-500 h-4 rounded-full`}
-            style={{ width: `${(currentSpend / monthlyBudget) * 100}%` }}
-          ></div>
-        </div>
-
-        {currentSpend > monthlyBudget * 0.9 && (
-          <div className="bg-red-50 border-l-4 border-red-500 p-4 mt-4">
-            <div className="flex items-center">
-              <AlertCircle size={16} className="text-red-500 mr-2" />
-              <p className="text-red-700">
-                You're close to exceeding your monthly budget!
-              </p>
-            </div>
-          </div>
-        )}
-      </div>
     </div>
   );
 };

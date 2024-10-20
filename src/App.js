@@ -7,6 +7,7 @@ import { BudgetProvider } from './components/BudgetContext';
 import SavingGoals from './components/SavingGoals';
 import BillPaymentCalendar from './components/BillPaymentCalendar';
 
+
 const App = () => {
   return (
     <BudgetProvider>

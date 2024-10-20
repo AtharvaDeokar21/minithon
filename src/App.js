@@ -1,22 +1,32 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Dashboard from './Pages/Dashboard';
-import './index.css'
+import ExpenseTracker from './components/ExpenseTracker';
+import { BudgetProvider } from './components/BudgetContext';
+import SavingGoals from './components/SavingGoals';
+import BillPaymentCalendar from './components/BillPaymentCalendar';
 
 const App = () => {
   return (
-    <div>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        {/* Add other routes as needed */}
-      </Routes>
-    </div>
+    <BudgetProvider>
+    <Router>
+      <div>
+        <Navbar />  {/* Navbar and Total Spent/Bonus Points will appear on all pages */}
+        <div className="container mx-auto p-4">
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/expense-tracker" element={<ExpenseTracker />} />
+            <Route path="/saving-goals" element={<SavingGoals />} />
+            <Route path="/bill-payment" element={<BillPaymentCalendar />} />
+            {/* Add other routes as needed */}
+          </Routes>
+        </div>
+      </div>
+    </Router>
+    </BudgetProvider>
   );
 };
 
-const Home = () => <h1>Home Page</h1>;
 
 export default App;

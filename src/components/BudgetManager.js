@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+// BudgetManager.js
+import React from 'react';
+import { useBudget } from './BudgetContext';
 
 const BudgetManager = () => {
-  const [budget, setBudget] = useState({ daily: '', monthly: '' });
+  const { budget, setBudget } = useBudget();
 
   const handleInput = (e) => {
     const { name, value } = e.target;

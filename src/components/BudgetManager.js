@@ -60,8 +60,6 @@ const BudgetManager = () => {
   <div className="mt-2 space-y-2">
     <p>Daily Budget: ₹{budget.daily || 'Not Set'}</p>
     <p>Monthly Budget: ₹{budget.monthly || 'Not Set'}</p>
-    <p>Current Spend: ₹{currentSpend}</p>
-    <p>Remaining: ₹{remaining}</p>
   </div>
 
   {/* Progress Bar Container */}

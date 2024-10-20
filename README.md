@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **Bill Payment Calendar** is a React-based application designed to help users manage their financial obligations by tracking upcoming bills and associated expenses. The app allows users to create events for each bill, set budgets, and log typical expenses, providing a comprehensive overview of their financial commitments over the next 30 days.
+**FinTrack** is a React-based application designed to help users manage their financial obligations by tracking upcoming bills and associated expenses. The app allows users to create events for each bill, set budgets, and log typical expenses, providing a comprehensive overview of their financial commitments over the next 30 days.
 
 ## Features
 

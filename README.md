@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Bill Payment Calendar
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The **Bill Payment Calendar** is a React-based application designed to help users manage their financial obligations by tracking upcoming bills and associated expenses. The app allows users to create events for each bill, set budgets, and log typical expenses, providing a comprehensive overview of their financial commitments over the next 30 days.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Event Creation:** Add new bill events with essential details, including the event name, date, suggested budget, description, and typical expenses.
+- **Upcoming Events:** View a calendar displaying upcoming bill events within the next 30 days.
+- **Expense Tracking:** Add typical expense items for each event, allowing users to see their expected costs.
+- **Budget Overview:** Get insights into total expenses versus suggested budgets with a visual representation of spending.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React:** A JavaScript library for building user interfaces.
+- **React-Calendar:** A library for rendering a calendar component.
+- **React Icons:** For incorporating icons in the UI.
+- **CSS (Tailwind CSS or similar):** For styling the application.
 
-### `npm test`
+## Usage
+1. Click on the "Add New Event" button to open the event creation dialog.
+2. Fill in the event details:
+- Event Name: Name of the bill.
+- Event Date: Due date of the bill.
+- Suggested Budget: Estimated amount for the bill.
+- Description: Brief description of the bill.
+3. Add any typical expense items related to the bill (e.g., item name and amount).
+4. Save the event to add it to your calendar.
+5. View and manage your upcoming bills and budgets on the dashboard.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Improvements
+- User Authentication: Implement user login to save events and budgets.
+- Reminders: Add notification features to remind users of upcoming bills.
+- Data Visualization: Enhance budget tracking with detailed graphs and charts.

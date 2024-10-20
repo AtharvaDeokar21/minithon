@@ -1,4 +1,4 @@
-# Bill Payment Calendar
+# FinTrack
 
 ## Overview
 
